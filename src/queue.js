@@ -21,8 +21,7 @@ class Queue {
   }
 
   getUnderlyingList() {
-    let current = this.head;
-    return current;
+    return this.head;
   }
 
   enqueue(value) {

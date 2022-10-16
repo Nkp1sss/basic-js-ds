@@ -1,4 +1,4 @@
-const { NotImplementedError } = require('../extensions/index.js');
+const { NotImplementedError, ListNode } = require('../extensions/index.js');
 
 // const { ListNode } = require('../extensions/list-node.js');
 
@@ -13,12 +13,6 @@ const { NotImplementedError } = require('../extensions/index.js');
  * queue.dequeue(); // returns the top element from queue and deletes it, returns 1
  * queue.getUnderlyingList() // returns { value: 3, next: null }
  */
-class Node {
-  constructor(value) {
-    this.value = value;
-    this.next = null;
-  }
-}
 
 class Queue {
   constructor() {
@@ -32,7 +26,7 @@ class Queue {
   }
 
   enqueue(value) {
-    let newNode = new Node(value);
+    let newNode = new ListNode(value);
 
     if (this.length === 0) {
       this.head = newNode;
